@@ -52,3 +52,51 @@ img{
   width:min(var(--max-width),92%);
   margin-inline:auto;
 }
+
+/* ---------- Navigation ---------- */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(16px);
+  background: rgba(9, 9, 11, 0.75);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-content {
+  height: 72px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  gap: .6rem;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.accent {
+  color: var(--cyan);
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+
+  list-style: none;
+}
+
+nav a {
+  color: var(--muted);
+  transition: .25s;
+}
+
+nav a:hover {
+  color: var(--text);
+}

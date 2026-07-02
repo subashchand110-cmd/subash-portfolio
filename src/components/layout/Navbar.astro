@@ -1,0 +1,30 @@
+---
+const links = [
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
+  { href: "#blog", label: "Blog" },
+  { href: "#contact", label: "Contact" },
+];
+---
+
+<header class="navbar">
+  <div class="container nav-content">
+    <a href="/" class="logo">
+      <span class="accent">&lt;/&gt;</span>
+      <span>Subash Chand</span>
+    </a>
+
+    <nav>
+      <ul>
+        {
+          links.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
