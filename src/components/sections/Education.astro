@@ -1,0 +1,58 @@
+---
+import { education } from "../../data/education";
+---
+
+<section id="education" class="education container">
+  <div class="section-header">
+    <span class="section-tag">Education</span>
+
+    <h2>Academic Journey</h2>
+
+    <p>
+      My educational journey has provided a strong foundation in networking,
+      cloud technologies, cybersecurity, software development, and enterprise IT.
+    </p>
+  </div>
+
+  <div class="education-grid">
+    {
+      education.map((item) => (
+        <article class="education-card">
+
+          <span class="qualification">
+            🎓 {item.qualification}
+          </span>
+
+          <h3>{item.degree}</h3>
+
+          <p class="institution">
+            {item.institution}
+          </p>
+
+          <p class="location">
+            {item.location}
+          </p>
+
+          <p class="period">
+            {item.period}
+          </p>
+
+          <p class="education-summary">
+            {item.summary}
+          </p>
+
+          <div class="module-list">
+            {
+              item.modules.map((module) => (
+                <span class="pill">
+                  {module}
+                </span>
+              ))
+            }
+          </div>
+
+        </article>
+      ))
+    }
+  </div>
+</section>

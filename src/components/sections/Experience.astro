@@ -1,0 +1,60 @@
+---
+import { experience } from "../../data/experience";
+---
+
+<section id="experience" class="experience container">
+  <div class="section-header">
+    <span class="section-tag">Professional Experience</span>
+
+    <h2>Developing Transferable Skills</h2>
+
+    <p>
+      While transitioning into IT, I've developed strong leadership,
+      communication and problem-solving skills through years of working in
+      fast-paced customer-focused environments. These experiences have prepared
+      me to work effectively in technical support and infrastructure teams.
+    </p>
+  </div>
+
+  {
+    experience.map((job) => (
+      <article class="experience-card">
+        <div class="experience-header">
+          <div>
+            <span class="experience-badge">💼 Current Position</span>
+
+            <h3>{job.role}</h3>
+
+            <p class="company">{job.company}</p>
+
+            <p class="period">{job.period}</p>
+          </div>
+        </div>
+
+        <p class="experience-description">
+          {job.description}
+        </p>
+
+        <h4>Key Responsibilities</h4>
+
+        <ul class="achievement-list">
+          {
+            job.achievements.map((achievement) => (
+              <li>{achievement}</li>
+            ))
+          }
+        </ul>
+
+        <h4>Transferable Skills</h4>
+
+        <div class="skill-tags">
+          {
+            job.skills.map((skill) => (
+              <span class="pill">{skill}</span>
+            ))
+          }
+        </div>
+      </article>
+    ))
+  }
+</section>

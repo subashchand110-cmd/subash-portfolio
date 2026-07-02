@@ -1,0 +1,129 @@
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* ==========================================
+   HEADINGS
+========================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.15;
+  font-weight: 700;
+  color: var(--text);
+}
+
+h1 {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+}
+
+h2 {
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.15rem;
+}
+
+/* ==========================================
+   PARAGRAPHS
+========================================== */
+
+p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.intro {
+  display: block;
+  margin-bottom: .5rem;
+
+  color: var(--muted);
+
+  font-size: 1.25rem;
+
+  font-weight: 500;
+}
+
+.hero-title {
+  margin-bottom: 1rem;
+}
+
+.hero-title .gradient {
+  display: block;
+
+  font-size: clamp(4rem, 10vw, 7rem);
+
+  line-height: .95;
+
+  background: linear-gradient(
+    135deg,
+    var(--cyan),
+    var(--purple)
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+.hero-subtitle {
+  margin-bottom: 1.5rem;
+
+  color: var(--cyan);
+
+  font-size: 1.2rem;
+
+  font-weight: 600;
+}
+
+.hero-description {
+  max-width: 650px;
+}
+
+/* ==========================================
+   SECTION HEADER
+========================================== */
+
+.section-tag {
+  display: inline-block;
+
+  margin-bottom: .75rem;
+
+  color: var(--cyan);
+
+  font-size: .85rem;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: .08em;
+}
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a {
+  transition: var(--transition);
+}

@@ -1,102 +1,10 @@
 @import "@fontsource/inter";
 @import "@fontsource/jetbrains-mono";
 
-:root {
-  --bg: #09090b;
-  --surface: #111827;
-  --surface-light: #1f2937;
-
-  --text: #fafafa;
-  --muted: #9ca3af;
-
-  --cyan: #22d3ee;
-  --purple: #8b5cf6;
-
-  --border: rgba(255,255,255,.08);
-
-  --max-width: 1200px;
-  --radius: 18px;
-}
-
-*,
-*::before,
-*::after{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:"Inter",sans-serif;
-  min-height:100vh;
-  line-height:1.6;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-img{
-  max-width:100%;
-  display:block;
-}
-
-.container{
-  width:min(var(--max-width),92%);
-  margin-inline:auto;
-}
-
-/* ---------- Navigation ---------- */
-
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: blur(16px);
-  background: rgba(9, 9, 11, 0.75);
-  border-bottom: 1px solid var(--border);
-}
-
-.nav-content {
-  height: 72px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  display: flex;
-  gap: .6rem;
-  align-items: center;
-
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.accent {
-  color: var(--cyan);
-}
-
-nav ul {
-  display: flex;
-  gap: 2rem;
-
-  list-style: none;
-}
-
-nav a {
-  color: var(--muted);
-  transition: .25s;
-}
-
-nav a:hover {
-  color: var(--text);
-}
+@import "./variables.css";
+@import "./reset.css";
+@import "./typography.css";
+@import "./layout.css";
+@import "./components.css";
+@import "./sections.css";
+@import "./utilities.css";

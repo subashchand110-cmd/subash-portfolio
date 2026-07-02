@@ -1,0 +1,33 @@
+/* ==========================================
+   GLOBAL LAYOUT
+========================================== */
+
+.container {
+  width: min(var(--max-width), 92%);
+  margin-inline: auto;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+section {
+  padding: 7rem 0;
+}
+
+/* ==========================================
+   SECTION HEADER
+========================================== */
+
+.section-header {
+  max-width: 720px;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  margin-top: .5rem;
+}
+
+.section-header p {
+  margin-top: 1rem;
+}

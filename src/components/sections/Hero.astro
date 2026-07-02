@@ -1,0 +1,89 @@
+---
+import { profile } from "../../data/profile";
+import { Download } from "@lucide/astro";
+---
+
+<section class="hero container">
+  <div class="hero-grid">
+
+    <!-- LEFT SIDE -->
+    <div class="hero-content">
+      <p class="eyebrow">{profile.title}</p>
+
+      <h1 class="hero-title">
+        <span class="intro">Hi, I'm</span>
+
+        <span class="gradient">
+          {profile.name}
+        </span>
+      </h1>
+
+      <p class="hero-description">
+        {profile.tagline}
+      </p>
+
+      <div class="tech-stack">
+        {profile.technologies.map((tech) => (
+          <span class="pill">{tech}</span>
+        ))}
+      </div>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          View Projects
+        </a>
+
+        <a href={profile.resume} class="btn btn-secondary">
+          <Download size={18} />
+          <span>Download Resume</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="hero-visual">
+      <div class="hero-card">
+
+  <div class="card-header">
+    <span class="status-dot"></span>
+
+    <span>Available for Opportunities</span>
+  </div>
+
+  <h3>Technical Focus</h3>
+
+  <div class="stack-list">
+
+    <div class="stack-item">
+      ☁ Azure
+    </div>
+
+    <div class="stack-item">
+      🖥 Windows Server
+    </div>
+
+    <div class="stack-item">
+      🔐 Active Directory
+    </div>
+
+    <div class="stack-item">
+      🌐 Networking
+    </div>
+
+    <div class="stack-item">
+      🛡 Cybersecurity
+    </div>
+
+  </div>
+
+  <div class="location">
+
+      📍 Sydney, Australia
+
+  </div>
+
+</div>
+    </div>
+
+  </div>
+</section>

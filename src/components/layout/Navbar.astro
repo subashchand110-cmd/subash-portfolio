@@ -1,30 +1,48 @@
 ---
+import { profile } from "../../data/profile";
+
 const links = [
   { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
+  { href: "#education", label: "Education" },
+  { href: "#experience", label: "Experience" },
   { href: "#skills", label: "Skills" },
-  { href: "#blog", label: "Blog" },
+  { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ];
 ---
 
 <header class="navbar">
   <div class="container nav-content">
+
     <a href="/" class="logo">
-      <span class="accent">&lt;/&gt;</span>
-      <span>Subash Chand</span>
+      <div class="logo-box">SC</div>
+
+      <span class="logo-text">
+        {profile.name}
+      </span>
     </a>
 
     <nav>
-      <ul>
+      <ul class="nav-links">
         {
           links.map((link) => (
             <li>
-              <a href={link.href}>{link.label}</a>
+              <a href={link.href}>
+                {link.label}
+              </a>
             </li>
           ))
         }
       </ul>
     </nav>
+
+    <a
+      href={profile.resume}
+      class="resume-btn"
+      target="_blank"
+    >
+      Resume
+    </a>
+
   </div>
 </header>

@@ -1,0 +1,56 @@
+---
+import { skillCategories } from "../../data/skills";
+---
+
+<section id="skills" class="skills container">
+
+  <div class="section-header">
+    <span class="section-tag">Technical Skills</span>
+
+    <h2>Technologies & Platforms</h2>
+
+    <p>
+      A growing technical toolkit developed through university,
+      certifications and hands-on learning.
+    </p>
+  </div>
+
+  <div class="skills-grid">
+
+    {
+      skillCategories.map((category) => (
+
+        <article class="skill-card">
+
+          <h3>
+
+            <span>{category.icon}</span>
+
+            {category.title}
+
+          </h3>
+
+          <div class="skill-list">
+
+            {
+              category.skills.map((skill)=>(
+
+                <span class="pill">
+
+                  {skill}
+
+                </span>
+
+              ))
+            }
+
+          </div>
+
+        </article>
+
+      ))
+    }
+
+  </div>
+
+</section>

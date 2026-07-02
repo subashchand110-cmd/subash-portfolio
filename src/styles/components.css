@@ -1,0 +1,264 @@
+/* ==================================================
+   NAVBAR
+================================================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  backdrop-filter: blur(20px);
+  background: rgba(9, 9, 11, 0.75);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 72px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  text-decoration: none;
+}
+
+.logo-box {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: var(--radius-sm);
+
+  font-weight: 700;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    var(--cyan),
+    var(--purple)
+  );
+}
+
+.logo-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--muted);
+
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.resume-btn {
+  padding: 0.8rem 1.4rem;
+
+  border-radius: 999px;
+
+  border: 1px solid var(--border);
+
+  transition: var(--transition);
+}
+
+.resume-btn:hover {
+  border-color: var(--cyan);
+
+  background: rgba(255,255,255,.05);
+}
+
+/* ==================================================
+   BUTTONS
+================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: .6rem;
+
+  padding: 1rem 1.6rem;
+
+  border-radius: 999px;
+
+  font-weight: 600;
+
+  transition: var(--transition);
+
+  cursor: pointer;
+}
+
+.btn-primary {
+
+  color: white;
+
+  background: linear-gradient(
+      135deg,
+      var(--cyan),
+      var(--purple)
+  );
+}
+
+.btn-primary:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 30px rgba(34,211,238,.2);
+
+}
+
+.btn-secondary {
+
+  border: 1px solid var(--border);
+
+}
+
+.btn-secondary:hover {
+
+  border-color: var(--cyan);
+
+  background: rgba(255,255,255,.04);
+
+}
+
+/* ==================================================
+   CARD
+================================================== */
+
+.card {
+
+  padding: 2rem;
+
+  border-radius: var(--radius-md);
+
+  border: 1px solid var(--border);
+
+  background: rgba(255,255,255,.03);
+
+  backdrop-filter: blur(16px);
+
+  transition: var(--transition);
+
+}
+
+.card:hover {
+
+  transform: translateY(-6px);
+
+  border-color: rgba(34,211,238,.25);
+
+  box-shadow: var(--shadow-card);
+
+}
+
+/* ==================================================
+   PILLS
+================================================== */
+
+.pill {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: .55rem 1rem;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.03);
+
+  border: 1px solid var(--border);
+
+  color: var(--muted);
+
+  font-size: .9rem;
+
+}
+
+/* ==================================================
+   SECTION HEADER
+================================================== */
+
+.section-header {
+
+  max-width: 720px;
+
+  margin-bottom: 4rem;
+
+}
+
+.section-tag {
+
+  display: inline-block;
+
+  margin-bottom: .75rem;
+
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer {
+
+  padding: 5rem 0 2rem;
+
+  border-top: 1px solid var(--border);
+
+}
+
+.footer-content {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 2rem;
+
+}
+
+.footer-links {
+
+  display: flex;
+
+  gap: 1.5rem;
+
+}
+
+.footer-links a {
+
+  color: var(--muted);
+
+}
+
+.footer-links a:hover {
+
+  color: white;
+
+}
