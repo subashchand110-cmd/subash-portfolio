@@ -1,69 +1,205 @@
 ---
 import { projects } from "../../data/projects";
+
+import {
+  FolderGit2,
+  GitBranch,
+  ExternalLink,
+  Calendar,
+  Star,
+  CheckCircle2,
+  Laptop,
+  Cloud,
+  Server
+} from "@lucide/astro";
+
+const typeIcons = {
+  Web: Laptop,
+  Cloud: Cloud,
+  Infrastructure: Server
+};
 ---
 
-<section id="projects" class="projects container">
+<section id="projects" class="projects">
 
-  <div class="section-header">
+  <div class="container">
 
-    <span class="section-tag">
-      Featured Projects
-    </span>
+    <div class="section-header">
 
-    <h2>
-      Learning Through Building
-    </h2>
+      <span class="section-tag">
 
-    <p>
-      Every project represents practical learning and hands-on experience.
-      As I continue developing my technical skills, this collection will grow.
-    </p>
+        <FolderGit2 size={18} />
 
-  </div>
+        Projects
 
-  <div class="projects-grid">
+      </span>
 
-    {
-      projects.map((project) => (
+      <h2>Featured Projects</h2>
 
-        <article class="project-card">
+      <p>
+        Practical projects and home labs demonstrating my growing skills in
+        cloud, infrastructure and modern web technologies.
+      </p>
 
-          <div class="project-top">
+    </div>
 
-            <span class="project-status">
-              {project.status}
-            </span>
+    <div class="projects-grid">
 
-            <span class="project-year">
-              {project.year}
-            </span>
+      {
+        projects.map((project) => {
 
-          </div>
+          const Icon = typeIcons[project.type];
 
-          <h3>
-            {project.title}
-          </h3>
+          return (
 
-          <p>
-            {project.description}
-          </p>
+            <article class="card project-card">
 
-          <div class="project-tech">
+              {project.featured && (
 
-            {
-              project.technologies.map((tech)=>(
-                <span class="pill">
-                  {tech}
+                <span class="featured-badge">
+
+                  <Star size={14} />
+
+                  Featured Project
+
                 </span>
-              ))
-            }
 
-          </div>
+              )}
 
-        </article>
+              <div class="project-header">
 
-      ))
-    }
+                <div>
+
+                  <h3 class="card-title">
+
+                    {Icon && <Icon size={22} />}
+
+                    <span>{project.title}</span>
+
+                  </h3>
+
+                </div>
+
+              </div>
+
+              <div class="project-meta">
+
+                <span class="project-type">
+
+                  {project.type}
+
+                </span>
+
+                <span class={`status ${project.status.toLowerCase().replace(/\s+/g, "-")}`}>
+
+                  {project.status}
+
+                </span>
+
+                <span>
+
+                  <Calendar size={15} />
+
+                  {project.year}
+
+                </span>
+
+              </div>
+
+              <p class="project-description">
+
+                {project.description}
+
+              </p>
+
+              <h4>Highlights</h4>
+
+              <ul class="highlight-list">
+
+                {
+                  project.highlights.map((item) => (
+
+                    <li>
+
+                      <CheckCircle2 size={16} />
+
+                      <span>{item}</span>
+
+                    </li>
+
+                  ))
+                }
+
+              </ul>
+
+              <div class="tech-stack">
+
+                {
+                  project.technologies.map((tech) => (
+
+                    <span class="pill">
+
+                      {tech}
+
+                    </span>
+
+                  ))
+                }
+
+              </div>
+
+              <div class="project-links">
+
+                {
+
+                  project.github && (
+
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      class="btn btn-secondary"
+                    >
+
+                      <GitBranch size={18} />
+
+                      GitHub
+
+                    </a>
+
+                  )
+
+                }
+
+                {
+
+                  project.demo && project.demo !== "#" && (
+
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      class="btn btn-primary"
+                    >
+
+                      <ExternalLink size={18} />
+
+                      Live Demo
+
+                    </a>
+
+                  )
+
+                }
+
+              </div>
+
+            </article>
+
+          );
+
+        })
+      }
+
+    </div>
 
   </div>
 

@@ -1,58 +1,117 @@
 ---
 import { education } from "../../data/education";
+
+import {
+  GraduationCap,
+  Calendar,
+  School,
+  MapPin
+} from "@lucide/astro";
 ---
 
-<section id="education" class="education container">
-  <div class="section-header">
-    <span class="section-tag">Education</span>
+<section id="education" class="education">
 
-    <h2>Academic Journey</h2>
+  <div class="container">
 
-    <p>
-      My educational journey has provided a strong foundation in networking,
-      cloud technologies, cybersecurity, software development, and enterprise IT.
-    </p>
+    <div class="section-header">
+
+      <span class="section-tag">
+
+        <GraduationCap size={18} />
+
+        Education
+
+      </span>
+
+      <h2>Academic Journey</h2>
+
+      <p>
+        My academic journey has built a strong foundation in networking,
+        cloud technologies, cybersecurity and enterprise IT systems.
+      </p>
+
+    </div>
+
+    <div class="education-timeline">
+
+      {
+        education.map((item) => (
+
+          <article class="card education-card">
+
+            <div class="timeline-dot"></div>
+
+            <span class="qualification">
+
+              {item.qualification}
+
+            </span>
+
+            <h3 class="card-title">
+
+              <GraduationCap size={20} />
+
+              <span>{item.degree}</span>
+
+            </h3>
+
+            <div class="education-meta">
+
+              <span>
+
+                <School size={16} />
+
+                {item.institution}
+
+              </span>
+
+              <span>
+
+                <MapPin size={16} />
+
+                {item.location}
+
+              </span>
+
+              <span>
+
+                <Calendar size={16} />
+
+                {item.period}
+
+              </span>
+
+            </div>
+
+            <p class="education-summary">
+
+              {item.summary}
+
+            </p>
+
+            <div class="module-list">
+
+              {
+                item.modules.map((module) => (
+
+                  <span class="pill">
+
+                    {module}
+
+                  </span>
+
+                ))
+              }
+
+            </div>
+
+          </article>
+
+        ))
+      }
+
+    </div>
+
   </div>
 
-  <div class="education-grid">
-    {
-      education.map((item) => (
-        <article class="education-card">
-
-          <span class="qualification">
-            🎓 {item.qualification}
-          </span>
-
-          <h3>{item.degree}</h3>
-
-          <p class="institution">
-            {item.institution}
-          </p>
-
-          <p class="location">
-            {item.location}
-          </p>
-
-          <p class="period">
-            {item.period}
-          </p>
-
-          <p class="education-summary">
-            {item.summary}
-          </p>
-
-          <div class="module-list">
-            {
-              item.modules.map((module) => (
-                <span class="pill">
-                  {module}
-                </span>
-              ))
-            }
-          </div>
-
-        </article>
-      ))
-    }
-  </div>
 </section>

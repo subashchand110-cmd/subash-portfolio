@@ -1,10 +1,25 @@
 export const projects = [
+
   {
     title: "Professional Portfolio Website",
+
+    type: "Web",
+
     status: "Completed",
+
     year: "2026",
+
+    featured: true,
+
     description:
       "A modern portfolio website built with Astro to showcase my education, projects, certifications and technical skills.",
+
+    highlights: [
+      "Responsive design",
+      "Astro component architecture",
+      "Reusable design system",
+      "GitHub Pages deployment"
+    ],
 
     technologies: [
       "Astro",
@@ -15,18 +30,29 @@ export const projects = [
 
     github: "https://github.com/subashchand110-cmd/subash-portfolio",
 
-    demo: "#",
-
-    featured: true
+    demo: "#"
   },
 
   {
     title: "Windows Server & Active Directory Lab",
-    status: "Coming Soon",
+
+    type: "Infrastructure",
+
+    status: "In Progress",
+
     year: "2026",
 
+    featured: false,
+
     description:
-      "A hands-on home lab focused on Windows Server, Active Directory, DNS, DHCP and Group Policy.",
+      "Building a Windows Server home lab to gain practical experience with enterprise infrastructure technologies.",
+
+    highlights: [
+      "Active Directory",
+      "DNS",
+      "DHCP",
+      "Group Policy"
+    ],
 
     technologies: [
       "Windows Server",
@@ -38,30 +64,40 @@ export const projects = [
 
     github: "",
 
-    demo: "",
-
-    featured: true
+    demo: ""
   },
 
   {
     title: "Azure Infrastructure Lab",
+
+    type: "Cloud",
+
     status: "Planned",
+
     year: "2026",
 
+    featured: false,
+
     description:
-      "Deploying and managing Azure virtual machines, networking, storage and identity services.",
+      "Deploying Azure virtual machines, networking and identity services through practical cloud labs.",
+
+    highlights: [
+      "Azure Virtual Machines",
+      "Azure Virtual Network",
+      "Network Security Groups",
+      "Azure Storage"
+    ],
 
     technologies: [
       "Azure",
       "Virtual Network",
-      "VM",
-      "NSG"
+      "Virtual Machines",
+      "Network Security Groups"
     ],
 
     github: "",
 
-    demo: "",
-
-    featured: true
+    demo: ""
   }
+
 ];

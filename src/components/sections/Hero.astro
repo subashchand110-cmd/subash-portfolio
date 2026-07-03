@@ -1,88 +1,141 @@
 ---
 import { profile } from "../../data/profile";
-import { Download } from "@lucide/astro";
+import {
+  Download,
+  Cloud,
+  Server,
+  Shield,
+  Network,
+  MapPin,
+  CircleCheckBig,
+Building2
+} from "@lucide/astro";
+
+const techIcons = {
+  Azure: Cloud,
+  "Windows Server": Server,
+  "Active Directory": Building2,
+  Networking: Network,
+  Cybersecurity: Shield,
+};
 ---
 
-<section class="hero container">
-  <div class="hero-grid">
+<section class="hero">
+  <div class="container hero-grid">
 
-    <!-- LEFT SIDE -->
+    <!-- LEFT COLUMN -->
+
     <div class="hero-content">
-      <p class="eyebrow">{profile.title}</p>
+
+      <span class="section-tag">
+        {profile.title}
+      </span>
 
       <h1 class="hero-title">
-        <span class="intro">Hi, I'm</span>
+        <span class="intro">
+          Hi, I'm
+        </span>
 
         <span class="gradient">
           {profile.name}
         </span>
       </h1>
 
-      <p class="hero-description">
-        {profile.tagline}
+      <p class="hero-subtitle">
+        {profile.subtitle}
       </p>
 
-      <div class="tech-stack">
-        {profile.technologies.map((tech) => (
-          <span class="pill">{tech}</span>
-        ))}
-      </div>
+      <p class="hero-description">
+        {profile.description}
+      </p>
 
       <div class="hero-actions">
+
         <a href="#projects" class="btn btn-primary">
           View Projects
         </a>
 
-        <a href={profile.resume} class="btn btn-secondary">
+        <a
+          href={profile.resume}
+          class="btn btn-secondary"
+          target="_blank"
+        >
           <Download size={18} />
           <span>Download Resume</span>
         </a>
+
       </div>
+
+      <div class="tech-stack">
+
+        {
+          profile.technologies.map((tech) => (
+
+            <span class="pill">
+              {tech}
+            </span>
+
+          ))
+        }
+
+      </div>
+
     </div>
 
-    <!-- RIGHT SIDE -->
+    <!-- RIGHT COLUMN -->
+
     <div class="hero-visual">
-      <div class="hero-card">
 
-  <div class="card-header">
-    <span class="status-dot"></span>
+      <div class="card hero-card">
 
-    <span>Available for Opportunities</span>
-  </div>
+        <div class="card-header">
 
-  <h3>Technical Focus</h3>
+          <span class="status-dot"></span>
 
-  <div class="stack-list">
+          <span>
+            {profile.availability}
+          </span>
 
-    <div class="stack-item">
-      ☁ Azure
-    </div>
+        </div>
 
-    <div class="stack-item">
-      🖥 Windows Server
-    </div>
+        <h3>
+          Technical Focus
+        </h3>
 
-    <div class="stack-item">
-      🔐 Active Directory
-    </div>
+        <div class="stack-list">
 
-    <div class="stack-item">
-      🌐 Networking
-    </div>
+          {
+            profile.technologies.map((tech) => {
 
-    <div class="stack-item">
-      🛡 Cybersecurity
-    </div>
+              const Icon = techIcons[tech];
 
-  </div>
+              return (
 
-  <div class="location">
+                <div class="stack-item">
 
-      📍 Sydney, Australia
+                  {Icon && <Icon size={18} />}
 
-  </div>
+                  <span>{tech}</span>
 
-</div>
+                </div>
+
+              );
+
+            })
+          }
+
+        </div>
+
+        <div class="location">
+
+          <MapPin size={18} />
+
+          <span>{profile.location}</span>
+
+        </div>
+
+      </div>
+
     </div>
 
   </div>

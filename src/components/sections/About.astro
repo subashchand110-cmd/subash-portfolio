@@ -1,45 +1,132 @@
 ---
-import { profile } from "../../data/profile";
+import {
+  UserRound,
+  Target,
+  Cloud,
+  Server,
+  Building2,
+  Network,
+  Shield
+} from "@lucide/astro";
 ---
 
-<section id="about" class="about container">
-  <div class="section-header">
-    <span class="section-tag">About Me</span>
+<section id="about" class="about">
 
-    <h2>Building a Career in IT</h2>
-  </div>
+  <div class="container">
 
-  <div class="about-grid">
-    <div>
-      <p>
-        I'm a Master of Applied Information Technology graduate based in
-        Sydney, Australia, with a strong interest in cloud technologies,
-        networking, systems administration and cybersecurity.
-      </p>
+    <div class="section-header">
 
-      <p>
-        I enjoy solving technical problems, building home lab environments,
-        learning new technologies and improving my practical IT skills through
-        projects and continuous learning.
-      </p>
+      <span class="section-tag">
+
+        <UserRound size={18} />
+
+        About
+
+      </span>
+
+      <h2>
+        About Me
+      </h2>
 
       <p>
-        I'm currently seeking an entry-level IT opportunity where I can
-        contribute, learn from experienced professionals and continue growing
-        my technical expertise.
+        A recent Master of Applied Information Technology graduate with a passion
+        for infrastructure, cloud technologies and IT support.
       </p>
+
     </div>
 
-    <div class="about-card">
-      <h3>Currently Focused On</h3>
+    <div class="about-grid">
 
-      <ul>
-        <li>☁ Azure Administration</li>
-        <li>🖥 Windows Server</li>
-        <li>🔐 Active Directory</li>
-        <li>🌐 Networking</li>
-        <li>🛡 Cybersecurity</li>
-      </ul>
+      <!-- Left -->
+
+      <div class="about-content">
+
+        <p>
+          I'm a Master of Applied Information Technology graduate based in Sydney,
+          Australia with a strong interest in cloud technologies, networking,
+          Windows administration and cybersecurity.
+        </p>
+
+        <p>
+          I enjoy solving technical problems, building home lab environments and
+          continuously improving my practical IT skills through hands-on projects,
+          certifications and self-directed learning.
+        </p>
+
+        <p>
+          My goal is to begin my career in an IT Support, Systems Administration
+          or Infrastructure role where I can contribute, learn from experienced
+          professionals and continue developing my technical expertise.
+        </p>
+
+      </div>
+
+      <!-- Right -->
+
+      <aside class="card about-card">
+
+        <h3 class="card-title">
+
+          <Target size={20} />
+
+          <span>Current Technical Focus</span>
+
+        </h3>
+
+        <p>
+
+Current Learning Areas
+
+</p>
+
+        <div class="stack-list">
+
+          <div class="stack-item">
+
+            <Cloud size={18} />
+
+            <span>Microsoft Azure</span>
+
+          </div>
+
+          <div class="stack-item">
+
+            <Server size={18} />
+
+            <span>Windows Server</span>
+
+          </div>
+
+          <div class="stack-item">
+
+            <Building2 size={18} />
+
+            <span>Active Directory</span>
+
+          </div>
+
+          <div class="stack-item">
+
+            <Network size={18} />
+
+            <span>Networking</span>
+
+          </div>
+
+          <div class="stack-item">
+
+            <Shield size={18} />
+
+            <span>Cybersecurity</span>
+
+          </div>
+
+        </div>
+
+      </aside>
+
     </div>
+
   </div>
+
 </section>

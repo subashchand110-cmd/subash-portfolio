@@ -1,55 +1,89 @@
 ---
 import { skillCategories } from "../../data/skills";
+
+import {
+  Cloud,
+  Server,
+  Network,
+  Shield,
+  Wrench
+} from "@lucide/astro";
+
+const icons = {
+  cloud: Cloud,
+  server: Server,
+  network: Network,
+  shield: Shield,
+  tool: Wrench
+};
 ---
 
-<section id="skills" class="skills container">
+<section id="skills" class="skills">
 
-  <div class="section-header">
-    <span class="section-tag">Technical Skills</span>
+  <div class="container">
 
-    <h2>Technologies & Platforms</h2>
+    <div class="section-header">
 
-    <p>
-      A growing technical toolkit developed through university,
-      certifications and hands-on learning.
-    </p>
-  </div>
+      <span class="section-tag">
 
-  <div class="skills-grid">
+        <Server size={18} />
 
-    {
-      skillCategories.map((category) => (
+        Technical Skills
 
-        <article class="skill-card">
+      </span>
 
-          <h3>
+      <h2>Technologies & Platforms</h2>
 
-            <span>{category.icon}</span>
+      <p>
+        Technical skills developed through university, certifications,
+        home labs and continuous hands-on learning.
+      </p>
 
-            {category.title}
+    </div>
 
-          </h3>
+    <div class="skills-grid">
 
-          <div class="skill-list">
+      {
+        skillCategories.map((category) => {
 
-            {
-              category.skills.map((skill)=>(
+          const Icon = icons[category.icon];
 
-                <span class="pill">
+          return (
 
-                  {skill}
+            <article class="card skill-card">
 
-                </span>
+              <h3 class="card-title">
 
-              ))
-            }
+                <Icon size={20} />
 
-          </div>
+                <span>{category.title}</span>
 
-        </article>
+              </h3>
 
-      ))
-    }
+              <div class="skill-list">
+
+                {
+                  category.skills.map((skill) => (
+
+                    <span class="pill">
+
+                      {skill}
+
+                    </span>
+
+                  ))
+                }
+
+              </div>
+
+            </article>
+
+          );
+
+        })
+      }
+
+    </div>
 
   </div>
 
