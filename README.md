@@ -4,7 +4,7 @@ A modern portfolio website built with Astro to showcase my education,
 technical skills, projects and career journey as an aspiring IT professional.
 
 ## Live Demo
-(Coming Soon)
+Available
 
 ## Features
 
