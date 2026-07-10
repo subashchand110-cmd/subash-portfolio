@@ -19,7 +19,7 @@ export const profile = {
 
   linkedin: "https://www.linkedin.com/in/subash-c-3497731a9/",
 
-  resume: "resume/Subash-Chand-Resume.pdf",
+  resume: "/resume/Subash-Chand-Resume.pdf",
 
   technologies: [
     "Azure",
