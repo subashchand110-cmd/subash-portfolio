@@ -55,14 +55,13 @@ const techIcons = {
           View Projects
         </a>
 
-        <a
-          href={profile.resume}
-          class="btn btn-secondary"
-          target="_blank"
-        >
-          <Download size={15} />
-          <span>View Resume</span>
-        </a>
+     ---
+const resumeUrl = `${import.meta.env.BASE_URL}resume/Subash-Chand-Resume.pdf`;
+---
+
+<a href={resumeUrl} class="btn btn-secondary">
+  ...
+</a>
 
       </div>
 
