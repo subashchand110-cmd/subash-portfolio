@@ -5,7 +5,7 @@ export const education = [
 
     institution: "Victoria University",
 
-    location: "Melbourne, Australia",
+    location: "Sydney, Australia",
 
     period: "October 2022 – January 2025",
 
@@ -29,7 +29,7 @@ export const education = [
 
     institution: "Victoria University",
 
-    location: "Melbourne, Australia",
+    location: "Sydney, Australia",
 
     period: "October 2019 – September 2022",
 
