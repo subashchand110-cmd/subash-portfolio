@@ -12,7 +12,7 @@ export const projects = [
     featured: true,
 
     description:
-      "A modern portfolio website built with Astro to showcase my education, projects, certifications and technical skills.",
+      "Designed and developed a responsive portfolio website using Astro with reusable components, a scalable CSS architecture and Git version control.",
 
     highlights: [
       "Responsive design",
