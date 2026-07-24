@@ -17,13 +17,17 @@ const links = [
 <header class="navbar">
   <div class="container nav-content">
 
-    <a href="/" class="logo">
-      <div class="logo-box">SC</div>
+    <a
+  href="#"
+  class="logo"
+  onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;"
+>
+  <div class="logo-box">SC</div>
 
-      <span class="logo-text">
-        {profile.name}
-      </span>
-    </a>
+  <span class="logo-text">
+    {profile.name}
+  </span>
+</a>
 
     <nav>
       <ul class="nav-links">

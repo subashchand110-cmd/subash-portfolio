@@ -42,27 +42,37 @@ export const projects = [
 
     year: "2026",
 
-    featured: false,
+    featured: true,
 
     description:
-      "Building a Windows Server home lab to gain practical experience with enterprise infrastructure technologies.",
+      "Designed and deployed an enterprise-style Windows Server infrastructure using Oracle VirtualBox, implementing Active Directory, Group Policy, DHCP, AD CS, WSUS, DFS Namespace, Network Policy Server, and PowerShell automation.",
 
     highlights: [
-      "Active Directory",
-      "DNS",
-      "DHCP",
-      "Group Policy"
+    "Active Directory Domain Services",
+    "Group Policy Management",
+    "DHCP & DNS Configuration",
+    "AD Certificate Services (PKI)",
+    "Windows Server Update Services (WSUS)",
+    "DFS Namespace",
+    "Network Policy Server (NPS)",
+    "PowerShell Automation"
     ],
 
     technologies: [
-      "Windows Server",
-      "Active Directory",
-      "DNS",
-      "DHCP",
-      "Group Policy"
+    "Windows Server 2025",
+    "Active Directory",
+    "Group Policy",
+    "DNS",
+    "DHCP",
+    "AD CS",
+    "WSUS",
+    "DFS",
+    "NPS",
+    "PowerShell",
+    "VirtualBox"
     ],
 
-    github: "",
+    github: "https://github.com/subashchand110-cmd/windows-server-active-directory-lab",
 
     demo: ""
   },
