@@ -15,7 +15,7 @@ https://github.com/subashchand110-cmd/subash-portfolio
 - Responsive design
 - Modular Astro components
 - Clean and modern UI
-- Downloadable résumé
+- Downloadable resume
 - Project showcase
 - Education timeline
 - Technical skills section
